@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>広報会 in八戸 2025｜4/17〜19</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+  :root {
+    --sky: #0ea5e9;
+    --sky-mid: #38bdf8;
+    --sky-light: #7dd3fc;
+    --teal: #0d9488;
+    --teal-light: #5eead4;
+    --sun: #f59e0b;
+    --coral: #f97316;
+    --violet: #7c3aed;
+    --green: #16a34a;
+    --ink: #1e293b;
+    --slate: #475569;
+    --muted: #94a3b8;
+    --border: #e2e8f0;
+    --white: #ffffff;
+    --bg: #f8fafc;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: #2d4a3e;
+    color: var(--white);
+    padding: 72px 24px 68px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(74,124,89,0.38) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(122,171,138,0.22) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .hero-circle1 {
+    position: absolute;
+    right: -80px; bottom: -80px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(122,171,138,0.1);
+    pointer-events: none;
+  }
+  .hero-circle2 {
+    position: absolute;
+    left: -50px; top: -50px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(122,171,138,0.08);
+    pointer-events: none;
+  }
+  .hero-emoji {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 18px;
+    position: relative;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12));
+    animation: heroFloat 3.2s ease-in-out infinite;
+  }
+  @keyframes heroFloat {
+    0%,100% { transform: translateY(0px); }
+    50%      { transform: translateY(-7px); }
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(26px, 6.5vw, 50px);
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .hero-sub {
+    margin-top: 12px;
+    color: #b8d4c0;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    position: relative;
+  }
+  .hero-pills {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+  }
+  .hero-pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(184,212,192,0.5);
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  section { padding: 40px 0 0; }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--sky);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(19px, 4vw, 26px);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  /* ── MEMBERS ── */
+  .members-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .member-chip {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 24px;
+    padding: 8px 18px;
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .member-chip:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .member-chip .dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+  .member-chip .note {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* ── OVERVIEW CARDS ── */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .overview-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow-md);
+    border-top: 4px solid var(--sky);
+    transition: transform 0.15s;
+  }
+  .overview-card:hover { transform: translateY(-3px); }
+  .overview-card .ov-date {
+    font-size: 11px;
+    color: var(--sky);
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .overview-card .ov-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .overview-card .ov-desc {
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  /* ── ACCORDION ── */
+  .day-block {
+    margin-bottom: 14px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .day-header {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: var(--white);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: filter 0.2s;
+  }
+  .day-header:hover { filter: brightness(1.07); }
+  .day-header.day2 { background: linear-gradient(135deg, #0d9488, #0f766e); }
+  .day-header.day3 { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+
+  .day-number {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.45;
+    flex-shrink: 0;
+  }
+  .day-info { flex: 1; }
+  .day-date { font-size: 17px; font-weight: 700; letter-spacing: 0.5px; }
+  .day-theme { font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 2px; }
+  .day-toggle {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+    transition: transform 0.35s, background 0.2s;
+  }
+  .day-block.open .day-toggle { transform: rotate(180deg); background: rgba(255,255,255,0.3); }
+
+  /* accordion body */
+  .timeline-wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+    background: var(--white);
+  }
+  .day-block.open .timeline-wrap { max-height: 5000px; }
+
+  .timeline { padding: 6px 0 4px; }
+
+  /* ── TIMELINE ITEMS ── */
+  .tl-item {
+    display: flex;
+    position: relative;
+    padding: 0 18px 0 0;
+  }
+  .tl-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 61px;
+    top: 50px;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl-time-col {
+    width: 64px;
+    flex-shrink: 0;
+    padding: 17px 0 17px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .tl-time {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--sky);
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+  }
+  .tl-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--teal);
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .tl-dot.amber { background: var(--sun);    box-shadow: 0 0 0 2px var(--sun); }
+  .tl-dot.blue  { background: var(--sky);    box-shadow: 0 0 0 2px var(--sky); }
+  .tl-dot.red   { background: var(--coral);  box-shadow: 0 0 0 2px var(--coral); }
+
+  .tl-content { flex: 1; padding: 15px 0 15px 13px; }
+  .tl-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .tl-body {
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.65;
+  }
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--sky);
+    text-decoration: none;
+    background: #eff6ff;
+    border: 1.5px solid #bfdbfe;
+    border-radius: 20px;
+    padding: 6px 14px;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+  .map-link:hover {
+    background: #dbeafe;
+    border-color: var(--sky);
+    color: #1d4ed8;
+  }
+  .map-link + .map-link { margin-left: 8px; }
+  .map-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .map-links .map-link { margin-top: 0; margin-left: 0; }
+
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 3px 9px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+  .tag-move  { background: #e0f2fe; color: #0369a1; }
+  .tag-spot  { background: #fef3c7; color: #92400e; }
+  .tag-food  { background: #fce7f3; color: #9d174d; }
+  .tag-free  { background: #ede9fe; color: #5b21b6; }
+  .tag-key   { background: #dcfce7; color: #166534; }
+  .tag-train { background: #e0e7ff; color: #3730a3; }
+
+  .dur {
+    display: inline-block;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--muted);
+    padding: 1px 7px;
+    margin-left: 6px;
+    vertical-align: middle;
+    font-weight: 300;
+  }
+
+  /* split groups */
+  .group-split {
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    border: 1px solid var(--border);
+  }
+  .group-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .group-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .group-card {
+    flex: 1;
+    min-width: 130px;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 10px 12px;
+    border-left: 3px solid var(--teal);
+    font-size: 12px;
+    box-shadow: var(--shadow-sm);
+  }
+  .group-card.orange { border-left-color: var(--coral); }
+  .group-card .gc-title { font-weight: 700; font-size: 12px; color: var(--ink); margin-bottom: 4px; }
+  .group-card .gc-body { color: var(--slate); line-height: 1.55; }
+
+  /* ── INFO CARDS ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .info-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: var(--shadow-md);
+  }
+  .info-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .info-card ul { list-style: none; font-size: 13px; color: var(--slate); }
+  .info-card ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 7px;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+  .info-card ul li:last-child { border-bottom: none; }
+  .info-card ul li::before { content: '→'; color: var(--sky); flex-shrink: 0; font-weight: 700; }
+
+  /* ── NOTICE ── */
+  .notice-list { display: flex; flex-direction: column; gap: 10px; }
+  .notice-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 13px 16px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--sun);
+    font-size: 13.5px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+  .notice-item strong { color: var(--ink); }
+
+  /* ── MEMO ── */
+  .memo-section {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-md);
+  }
+  .memo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .memo-box h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  .memo-box ul { list-style: none; font-size: 13px; color: var(--slate); }
+  .memo-box ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .memo-box ul li::before { content: '☐'; color: var(--teal); font-size: 14px; }
+  .memo-blank {
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 70px;
+    color: #cbd5e1;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #2d4a3e;
+    color: #b8d4c0;
+    text-align: center;
+    padding: 36px 16px;
+    margin-top: 60px;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+  footer strong { color: var(--white); font-size: 17px; font-family: 'Noto Serif JP', serif; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 520px) {
+    .hero { padding: 56px 18px 52px; }
+    .tl-time-col { width: 54px; padding-left: 10px; }
+    .tl-item:not(:last-child)::after { left: 51px; }
+    .tl-content { padding-left: 10px; }
+    .overview-grid { grid-template-columns: 1fr; }
+    .group-row { flex-direction: column; }
+    .memo-grid { grid-template-columns: 1fr; }
+    .hero-pill { font-size: 13px; padding: 7px 14px; }
+  }
+
+  /* fade-in animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-emoji { animation: heroFloat 3.2s ease-in-out infinite, fadeUp 0.5s ease 0.05s both; }
+  .hero h1    { animation: fadeUp 0.5s ease 0.2s both; }
+  .hero-sub   { animation: fadeUp 0.5s ease 0.3s both; }
+  .hero-pills { animation: fadeUp 0.5s ease 0.4s both; }
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-circle1"></div>
+  <div class="hero-circle2"></div>
+  <span class="hero-emoji">✈️</span>
+  <h1>広報会 in八戸</h1>
+  <p class="hero-sub">青森の自然と食と酒を楽しむ3日間 🌿</p>
+  <div class="hero-pills">
+    <div class="hero-pill">📅 4月17日（金）〜19日（日）</div>
+    <div class="hero-pill">👥 7名</div>
+    <div class="hero-pill">🚗 レンタカー旅</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ══ MEMBERS ══ -->
+  <section>
+    <div class="section-label">MEMBERS</div>
+    <div class="section-title">参加者</div>
+    <div class="members-grid">
+      <div class="member-chip"><span class="dot"></span>なおこ</div>
+      <div class="member-chip"><span class="dot"></span>みずき</div>
+      <div class="member-chip"><span class="dot"></span>みつや</div>
+      <div class="member-chip"><span class="dot"></span>おぎ</div>
+      <div class="member-chip"><span class="dot"></span>みゆさん</div>
+      <div class="member-chip"><span class="dot" style="background:var(--sun)"></span>たきと <span class="note">4/18夜に帰宅</span></div>
+      <div class="member-chip"><span class="dot" style="background:var(--coral)"></span>えってぃ <span class="note">4/18朝から合流</span></div>
+    </div>
+  </section>
+
+  <!-- ══ OVERVIEW ══ -->
+  <section>
+    <div class="section-label">OVERVIEW</div>
+    <div class="section-title">全体スケジュール概要</div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="ov-date">DAY 1 · 4/17 FRI</div>
+        <div class="ov-title">集合・酒造見学</div>
+        <div class="ov-desc">八戸集合 → 電車で酒造見学・試飲 → チェックイン。夜は父の飲み会（任意）。おぎ・みゆさんは星のリゾートへ。</div>
+      </div>
+      <div class="overview-card" style="border-top-color:var(--teal)">
+        <div class="ov-date" style="color:var(--teal)">DAY 2 · 4/18 SAT</div>
+        <div class="ov-title">奥入瀬・十和田ドライブ</div>
+        <div class="ov-desc">レンタカーで奥入瀬渓流・十和田湖・現代美術館を満喫。えってぃ合流、夜は本八戸で飲み会。</div>
+      </div>
+      <div class="overview-card" style="border-top-color:var(--violet)">
+        <div class="ov-date" style="color:var(--violet)">DAY 3 · 4/19 SUN</div>
+        <div class="ov-title">フリーデイ・解散</div>
+        <div class="ov-desc">各々自由行動。それぞれのペースで帰路へ。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TIMELINE ══ -->
+  <section>
+    <div class="section-label">SCHEDULE</div>
+    <div class="section-title">日ごとの詳細タイムライン</div>
+
+    <!-- ── DAY 1 ── -->
+    <div class="day-block open" id="day1">
+      <div class="day-header" onclick="toggleDay('day1')">
+        <div class="day-number">01</div>
+        <div class="day-info">
+          <div class="day-date">4月17日（金）</div>
+          <div class="day-theme">集合 → 酒造見学 → チェックイン</div>
+        </div>
+        <div class="day-toggle">▼</div>
+      </div>
+      <div class="timeline-wrap">
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">12:10</div>
+              <div class="tl-dot blue"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-key">集合</span>
+              <div class="tl-title">八戸駅に集合</div>
+              <div class="tl-body">なおこ・みずき・みつや・おぎ・みゆさん・たきとの6名が集合。荷物をまとめて移動準備。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">12:20</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-train">電車</span>
+              <div class="tl-title">八戸駅 → 陸奥湊駅<span class="dur">約10分</span></div>
+              <div class="tl-body">JR八戸線に乗車。陸奥湊駅で下車後、徒歩約5分で八戸酒造へ。<br>
+                🚃 目安：<strong>12:22発</strong>（八戸線 鮫方面）→ 12:32頃 陸奥湊着
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">13:00</div>
+              <div class="tl-dot amber"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-spot">予約済み</span>
+              <div class="tl-title">八戸酒造 見学・試飲体験<span class="dur">約90分</span></div>
+              <div class="tl-body">予約済みの酒造見学＆試飲体験。✔ 試飲があるため4/18の運転担当は注意。
+                <div class="map-links"><a href="https://maps.google.com/?q=八戸酒造+青森県八戸市大字湊町" target="_blank" class="map-link">📍 八戸酒造</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">14:30</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-train">電車</span>
+              <div class="tl-title">陸奥湊駅 → 八戸駅 / グループ解散<span class="dur">約10分</span></div>
+              <div class="tl-body">八戸線で八戸駅方面へ。ここからグループに分かれて行動。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">15:00〜</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-free">自由行動</span>
+              <div class="tl-title">グループに分かれて行動</div>
+              <div class="tl-body"></div>
+              <div class="group-split">
+                <div class="group-label">グループ分け</div>
+                <div class="group-row">
+                  <div class="group-card">
+                    <div class="gc-title">🌿 おぎ・みゆさん</div>
+                    <div class="gc-body">星のリゾート奥入瀬へ。バス or タクシーで約90〜120分。
+                      <div class="map-links"><a href="https://maps.google.com/?q=星野リゾート+奥入瀬渓流ホテル" target="_blank" class="map-link">📍 星のリゾート奥入瀬</a></div>
+                    </div>
+                  </div>
+                  <div class="group-card orange">
+                    <div class="gc-title">🦀 その他メンバー</div>
+                    <div class="gc-body">種差海岸や八食センターをぶらり。海鮮・地元グルメを楽しむ。
+                      <div class="map-links">
+                        <a href="https://maps.google.com/?q=種差海岸+八戸" target="_blank" class="map-link">📍 種差海岸</a>
+                        <a href="https://maps.google.com/?q=八食センター+八戸" target="_blank" class="map-link">📍 八食センター</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">18:00〜</div>
+              <div class="tl-dot amber"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-food">夜（任意）</span>
+              <div class="tl-title">なおこのお父さんと飲み会 🍶</div>
+              <div class="tl-body">参加は任意。飲みたい人はぜひ！</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /day1 -->
+
+    <!-- ── DAY 2 ── -->
+    <div class="day-block open" id="day2">
+      <div class="day-header day2" onclick="toggleDay('day2')">
+        <div class="day-number">02</div>
+        <div class="day-info">
+          <div class="day-date">4月18日（土）</div>
+          <div class="day-theme">奥入瀬・十和田ドライブ → 飲み会</div>
+        </div>
+        <div class="day-toggle">▼</div>
+      </div>
+      <div class="timeline-wrap">
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">9:00</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-move">準備</span>
+              <div class="tl-title">朝の準備・出発</div>
+              <div class="tl-body">宿をチェックアウト or 荷物をまとめて本八戸・八戸駅方面へ。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">9:30</div>
+              <div class="tl-dot blue"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-key">レンタカー</span>
+              <div class="tl-title">レンタカー借り出し（本八戸付近）<span class="dur">〜10:00</span></div>
+              <div class="tl-body">運転候補：みずき・なおこ・たきと。手続き・荷積みに約20〜25分の見込み。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">10:00</div>
+              <div class="tl-dot red"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-key">合流</span>
+              <div class="tl-title">えってぃ・おぎ・みゆさん合流（八戸駅）</div>
+              <div class="tl-body">えってぃが八戸駅から合流（10:00頃）。おぎ・みゆさんも合流して全員集合 🎉</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">10:15</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-move">移動</span>
+              <div class="tl-title">奥入瀬渓流へ出発<span class="dur">約90分</span></div>
+              <div class="tl-body">八戸駅→奥入瀬渓流まで高速E4A利用で約90分。11:45頃到着の見込み。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">11:45</div>
+              <div class="tl-dot amber"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-food">ランチ</span>
+              <div class="tl-title">奥入瀬ブルワリー ランチ<span class="dur">約45分</span></div>
+              <div class="tl-body">渓流散策の前にブルワリーでランチ。クラフトビールも🍺（運転者はノンアル）
+                <div class="map-links"><a href="https://maps.google.com/?q=奥入瀬ブルワリー+青森県十和田市" target="_blank" class="map-link">📍 奥入瀬ブルワリー</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">12:30</div>
+              <div class="tl-dot amber"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-spot">観光</span>
+              <div class="tl-title">奥入瀬渓流 散策<span class="dur">約90分</span></div>
+              <div class="tl-body">4月は雪解け水で迫力の急流と新緑が絶景🌿 石ヶ戸〜雲井の滝あたりを巡る。
+                <div class="map-links"><a href="https://maps.google.com/?q=奥入瀬渓流+青森" target="_blank" class="map-link">📍 奥入瀬渓流</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">14:00</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-move">移動</span>
+              <div class="tl-title">十和田湖へ移動<span class="dur">約25分</span></div>
+              <div class="tl-body">奥入瀬渓流→十和田湖畔まで車で約25分。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">14:25</div>
+              <div class="tl-dot amber"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-spot">観光</span>
+              <div class="tl-title">十和田湖<span class="dur">〜15分</span></div>
+              <div class="tl-body">青く澄んだ湖面を眺めながら写真タイム📸 時間が限られるのでサクッと！
+                <div class="map-links"><a href="https://maps.google.com/?q=十和田湖+青森" target="_blank" class="map-link">📍 十和田湖</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">14:40</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-move">移動</span>
+              <div class="tl-title">十和田市現代美術館へ移動<span class="dur">約40分</span></div>
+              <div class="tl-body">十和田湖→十和田市現代美術館まで車で約40分。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">15:20</div>
+              <div class="tl-dot amber"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-spot">観光</span>
+              <div class="tl-title">十和田市現代美術館<span class="dur">〜17:00 約100分</span></div>
+              <div class="tl-body">屋外作品も含めゆっくり観覧できる時間を確保 🎨 閉館17:00に合わせて退館。
+                <div class="map-links"><a href="https://maps.google.com/?q=十和田市現代美術館" target="_blank" class="map-link">📍 十和田市現代美術館</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">17:00</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-move">移動</span>
+              <div class="tl-title">八戸へ帰還<span class="dur">約65分</span></div>
+              <div class="tl-body">十和田市→八戸駅・本八戸まで高速利用で約65分。17:00出発 → 18:05頃到着の見込み。</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">18:10</div>
+              <div class="tl-dot red"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-key">返却</span>
+              <div class="tl-title">レンタカー返却・たきと帰宅 👋</div>
+              <div class="tl-body">19:00返却に余裕をもって到着。たきとはここで解散、お疲れさまでした！<br>残りメンバーはそのまま飲み会へ 🎉</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">19:00〜</div>
+              <div class="tl-dot amber"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-food">飲み会</span>
+              <div class="tl-title">本八戸で飲み会 🍻</div>
+              <div class="tl-body">本八戸エリアにて飲み会スタート。お店・詳細は別途確認。翌日フリーなので思いっきり楽しもう！</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /day2 -->
+
+    <!-- ── DAY 3 ── -->
+    <div class="day-block open" id="day3">
+      <div class="day-header day3" onclick="toggleDay('day3')">
+        <div class="day-number">03</div>
+        <div class="day-info">
+          <div class="day-date">4月19日（日）</div>
+          <div class="day-theme">フリーデイ・解散</div>
+        </div>
+        <div class="day-toggle">▼</div>
+      </div>
+      <div class="timeline-wrap">
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-time-col">
+              <div class="tl-time">自由</div>
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <span class="tag tag-free">フリー</span>
+              <div class="tl-title">各自自由行動・帰路へ</div>
+              <div class="tl-body">
+                特に予定なし。自分のペースで観光・買い物・休憩など。<br><br>
+                <strong>帰路のオプション例</strong><br>
+                ・八戸駅から新幹線・特急で帰宅<br>
+                ・朝ゆっくり食事してから出発<br>
+                ・三八城公園や陣屋前朝市など朝ならではのスポットも◎
+                <div class="map-links">
+                  <a href="https://maps.google.com/?q=陣屋前朝市+八戸" target="_blank" class="map-link">📍 陣屋前朝市</a>
+                  <a href="https://maps.google.com/?q=三八城公園+八戸" target="_blank" class="map-link">📍 三八城公園</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /day3 -->
+
+  </section>
+
+  <!-- ══ TRANSPORT INFO ══ -->
+  <section>
+    <div class="section-label">TRANSPORT</div>
+    <div class="section-title">移動手段・所要時間まとめ</div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>🚗 主な区間（車）</h4>
+        <ul>
+          <li>八戸駅 → 奥入瀬渓流：約90分（高速E4A）</li>
+          <li>奥入瀬 → 十和田湖：約25分</li>
+          <li>十和田湖 → 十和田市美術館：約40分</li>
+          <li>十和田市 → 八戸駅：約65分（高速）</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>🚃 電車（4/17）</h4>
+        <ul>
+          <li>八戸駅 → 陸奥湊駅：JR八戸線 約10分</li>
+          <li>陸奥湊駅 → 八戸酒造：徒歩約5分</li>
+          <li>八戸駅 → 種差海岸：JR八戸線 約40分</li>
+          <li>八食センター：八戸駅から車で約10分</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>🚗 運転担当候補</h4>
+        <ul>
+          <li>みずき</li>
+          <li>なおこ</li>
+          <li>たきと（4/18夜帰宅のため前半のみ）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ NOTICES ══ -->
+  <section>
+    <div class="section-label">NOTICE</div>
+    <div class="section-title">注意点・リスク</div>
+    <div class="notice-list">
+      <div class="notice-item">🍺 <strong>試飲・飲酒と運転</strong>：4/17の酒造で試飲あり。4/18の運転担当は前日から飲み過ぎ注意、ノンアル対応を事前に確認しておきましょう。</div>
+      <div class="notice-item">⏰ <strong>4/18のスケジュール管理</strong>：19:00レンタカー返却が絶対ライン。17:00に十和田市を出発できるよう各スポットで声がけを。</div>
+      <div class="notice-item">🎨 <strong>十和田市現代美術館の閉館</strong>：通常17:00閉館。今回は15:20着予定で約100分確保できる計算です。スムーズに移動できるよう心がけて。</div>
+      <div class="notice-item">🌿 <strong>4月の天候・気温</strong>：奥入瀬・十和田エリアはまだ肌寒い日があります。防寒着・歩きやすい靴は必須。</div>
+      <div class="notice-item">📶 <strong>山間部の電波</strong>：奥入瀬渓流〜十和田湖周辺は電波が不安定。地図やナビは事前にオフラインDL推奨。</div>
+      <div class="notice-item">🅿️ <strong>駐車場・混雑</strong>：4月の奥入瀬は行楽シーズン。渓流沿いの駐車場は早い者勝ちです。バス停近くに停めて散策するのが◎。</div>
+      <div class="notice-item">👋 <strong>えってぃ合流タイミング</strong>：4/18の10:00頃に八戸駅で合流。レンタカー出発（10:15）に間に合うよう調整を。</div>
+    </div>
+  </section>
+
+  <!-- ══ MEMO ══ -->
+  <section style="padding-bottom: 0;">
+    <div class="section-label">MEMO</div>
+    <div class="section-title">持ち物・補足メモ</div>
+    <div class="memo-section">
+      <div class="memo-grid">
+        <div class="memo-box">
+          <h4>👜 持ち物チェック</h4>
+          <ul>
+            <li>身分証明書（免許証など）</li>
+            <li>現金（田舎は現金が安心）</li>
+            <li>動きやすい靴・防寒着</li>
+            <li>雨具（折りたたみ傘など）</li>
+            <li>充電器・モバイルバッテリー</li>
+            <li>酔い止め（山道注意）</li>
+            <li>オフライン地図（圏内用）</li>
+          </ul>
+        </div>
+        <div class="memo-box">
+          <h4>📝 確認事項</h4>
+          <ul>
+            <li>酒造の集合時刻・当日連絡先</li>
+            <li>レンタカー店の住所・受付時間</li>
+            <li>美術館の当日営業時間</li>
+            <li>4/18夜の飲み会のお店</li>
+            <li>えってぃの到着列車</li>
+            <li>おぎ・みゆさんの宿移動手段</li>
+          </ul>
+        </div>
+        <div class="memo-box">
+          <h4>🍽 食べたいもの</h4>
+          <ul>
+            <li>八戸の朝市グルメ</li>
+            <li>奥入瀬ブルワリーランチ</li>
+            <li>十和田バラ焼き</li>
+            <li>八食センターの海鮮</li>
+            <li>南部せんべい</li>
+          </ul>
+        </div>
+      </div>
+      <div class="memo-blank">自由メモ欄（印刷して書き込んでください）</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>広報会 in八戸 2025</strong><br><br>
+  4月17日（金）〜 4月19日（日）&nbsp;·&nbsp; 7名<br><br>
+  <span style="opacity:0.6; font-size:12px;">よい旅を ✈️🌿</span>
+</footer>
+
+<script>
+  function toggleDay(id) {
+    var block = document.getElementById(id);
+    block.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
